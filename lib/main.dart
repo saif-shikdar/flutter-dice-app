@@ -1,5 +1,5 @@
+import 'package:dice_app/dice_roller.dart';
 import 'package:dice_app/reusable_components/gradient_container.dart';
-import 'package:dice_app/reusable_components/styled_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -19,16 +19,16 @@ class MyApp extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark,
       ),
     );
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: GradientContainer(
-          gradientColors: [
+          gradientColors: const [
             Color.fromARGB(255, 26, 2, 80),
             Color.fromARGB(255, 45, 7, 98),
           ],
-          body: StyledText(
-            text: 'Hello World!',
+          body: Center(
+            child: DiceRoller(),
           ),
         ),
       ),
