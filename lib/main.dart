@@ -19,11 +19,11 @@ class MyApp extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark,
       ),
     );
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: GradientContainer(
-          gradientColors: const [
+          gradientColors: [
             Color.fromARGB(255, 26, 2, 80),
             Color.fromARGB(255, 45, 7, 98),
           ],
